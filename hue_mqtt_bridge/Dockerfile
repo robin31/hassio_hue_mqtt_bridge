@@ -18,7 +18,7 @@ RUN apk add --no-cache curl \
 # Install hue mqtt bridge
 RUN mkdir "$INSTALL_PATH"
 RUN git clone https://github.com/dale3h/hue-mqtt-bridge.git "$INSTALL_PATH"
-RUN cd "$INSTALL_PATH" && npm i
+RUN cd "$INSTALL_PATH" && npm i -vvv
 
 # Copy data
 COPY run.sh /
